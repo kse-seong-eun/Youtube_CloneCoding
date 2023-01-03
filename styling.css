@@ -1,0 +1,256 @@
+:root {
+    /* Color */
+    --black-color: #050404;
+    --dark-gray: #3f3f3f;
+    --light-gray: #a7a7a7;
+    --red-color: #f01515;
+    --blue-color: #4949ff;
+    --white-color: #fefff8;
+    /* Size */
+    --padding: 12px;
+    --avatar-size: 36px;
+
+    /* Font size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+button, 
+button :focus {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+    /*-------- header --------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color); 
+    color: var(--white-color);  
+}
+
+header .logo {
+    font-size: var(--font-large);
+}
+
+header .logo i {
+    color: var(--red-color)
+}
+
+header .icons {
+
+    margin-right: 12px;
+}
+
+header .icons .fa-magnifying-glass {
+    margin-right: var(--padding); 
+}
+
+
+    /*-------- Video player --------*/
+.player {
+    position: sticky;
+    top: 0;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    background-color: var(--black-color);
+    margin-bottom: var(--padding);
+}
+
+.player video {
+    height: 100%;
+    width: 100%;
+    max-width: 900px;
+}
+
+
+    /*-------- info MetaData --------*/
+body > .info {
+    padding: var(--padding);
+}   
+
+.info .metaData .hashtags {
+    display: flex;
+    color: var(--blue-color);
+    font-size: var(--font-small);
+}
+
+.info .metaData .hashtags li {
+    /* list-style: none;  li는 상단에 따로 빼서 적어라 */
+    margin-right: var(--padding)
+}
+
+.info .metaData .titleAndButton {
+    display: flex;
+}
+
+.info .metaData .titleAndButton .title {
+    font-size: var(--font-large);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right: var(--padding);
+}
+
+.info .metaData .titleAndButton .moreBtn {
+    height: 100%;
+}
+
+.info .metaData .views {
+    font-size: var(--font-small);
+    color: var(--light-gray);
+} 
+
+
+    /*-------- info Actions --------*/
+.info .actions {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding);
+}
+
+.info .actions button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--dark-gray);
+}
+
+.info .actions button i {
+    margin: 0 auto;
+    margin-bottom:  calc(var(--padding)/2);
+    font-size: 16px;
+}
+.info .actions button i.active {
+    color: var(--blue-color);
+}
+
+
+    /*-------- channel Discription--------*/
+.info .channel {
+    display: flex;
+    justify-content: space-between;
+    padding: calc(var(--padding)/2);
+    border-top: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.info .channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.info .channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+
+}
+.info .channel .metadata .info .name {
+    font-size: var(--font-medium);
+}
+.channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--light-gray);
+}
+
+.channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+}
+
+
+.info .channel .metadata img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+/*-------- up next-------*/
+.upNext {
+    /* background-color: #3f3f3f; */
+    padding: 0 var(--padding);
+    /* display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center; */
+}
+
+.upNext > .title {
+    margin-bottom: calc(var(--padding) / 2);
+    /* display: flex; 
+    align-items: flex-end; */
+    color: var(--light-gray);
+    font-size: var(--font-medium);
+}
+
+.upNext .item {
+    display: flex;
+    margin-top: var(--padding);
+    align-items: flex-start;
+}
+
+.upNext .item .img {
+    flex: 1 1 35%;
+    margin-right: var(--padding);
+}
+
+.upNext .item .img img {
+    width: 100%;
+}
+
+.upNext .item .info {
+    flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+    flex: 1 1 5%;
+}
+
+.upNext .item .info {
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 0; */
+}
+
+.upNext .item .info .title {
+    font-size: var(--font-small);
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+    color: var(--light-gray);
+    font-size: var(--font-micro);
+}
+
+.infoAndUpNext {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:750px) {
+.infoAndUpNext {
+    flex-direction: row;
+    margin: var(--padding) 0;
+}
+}
+    
