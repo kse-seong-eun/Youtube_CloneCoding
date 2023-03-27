@@ -1,4 +1,4 @@
-# clone-coding-01 / YoutubeCloneCoding
+# YoutubeCloneCoding
 ## 기초 Html과 CSS를 사용하여  유튜브 페이지 따라 만들기.
 
 ---
